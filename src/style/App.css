@@ -1,0 +1,87 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+.container{
+  grid-template-columns: 100%;
+  display: grid;
+}
+.item{
+  background-color: transparent;
+  cursor: pointer;
+  color: #3da6de;
+  border-radius: 2px;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+.header{
+  display: grid;
+  grid-gap: 1px;
+  text-align: center;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-column: 20px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  font-size: calc(1em + 1vw);
+}
+.item:hover{
+  background-color: #3da6de;
+  color: white;
+}
+.body{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-gap: 0.1em;
+}
+.body > div {
+  padding: 1em;
+  border: solid 1px grey;
+}
+div img{
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px){
+  .header{
+    grid-template-columns: 20% 20% 20% 14% 25%;
+  }
+  .body{
+    grid-template-columns: 100%;
+    grid-gap: 0em;
+  }
+}
